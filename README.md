@@ -1,4 +1,4 @@
-### CLIP-ImageSearch-NCNN
+# CLIP-ImageSearch-NCNN
 
 **为什么要做**：其实想做CLIP是因为我前面还想做GPT来的，当时想着既然要做GPT，为什么不把CLIP也做了呢？(不知廉耻的引一下流[GPT2-ChineseChat-NCNN](https://github.com/EdVince/GPT2-ChineseChat-NCNN))
 
