@@ -1,0 +1,486 @@
+7767517
+484 576    
+Input                    .\encode_image-fp16/0                        0 1 .\encode_image-fp16/0
+MemoryData               .\encode_image-fp16/821                      0 1 .\encode_image-fp16/821 0=2048 1=50
+Convolution              .\encode_image-fp16/Conv_1                   1 1 .\encode_image-fp16/0 .\encode_image-fp16/343 0=32 1=3 3=2 4=1 5=1 6=864 9=1
+Convolution              .\encode_image-fp16/Conv_3                   1 1 .\encode_image-fp16/343 .\encode_image-fp16/346 0=32 1=3 4=1 5=1 6=9216 9=1
+Convolution              .\encode_image-fp16/Conv_5                   1 1 .\encode_image-fp16/346 .\encode_image-fp16/349 0=64 1=3 4=1 5=1 6=18432 9=1
+Pooling                  .\encode_image-fp16/AveragePool_9            1 1 .\encode_image-fp16/349 .\encode_image-fp16/352 0=1 1=2 2=2 5=1
+Split                    .\encode_image-fp16/splitncnn_0              1 2 .\encode_image-fp16/352 .\encode_image-fp16/363 .\encode_image-fp16/352_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_10                  1 1 .\encode_image-fp16/352_splitncnn_1 .\encode_image-fp16/355 0=64 1=1 5=1 6=4096 9=1
+Convolution              .\encode_image-fp16/Conv_12                  1 1 .\encode_image-fp16/355 .\encode_image-fp16/358 0=64 1=3 4=1 5=1 6=36864 9=1
+Convolution              .\encode_image-fp16/Conv_14                  1 1 .\encode_image-fp16/358 .\encode_image-fp16/670 0=256 1=1 5=1 6=16384
+Convolution              .\encode_image-fp16/Conv_18                  1 1 .\encode_image-fp16/363 .\encode_image-fp16/673 0=256 1=1 5=1 6=16384
+BinaryOp                 .\encode_image-fp16/Add_19                   2 1 .\encode_image-fp16/670 .\encode_image-fp16/673 .\encode_image-fp16/366
+ReLU                     .\encode_image-fp16/Relu_20                  1 1 .\encode_image-fp16/366 .\encode_image-fp16/367
+Split                    .\encode_image-fp16/splitncnn_1              1 2 .\encode_image-fp16/367 .\encode_image-fp16/367_splitncnn_0 .\encode_image-fp16/367_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_21                  1 1 .\encode_image-fp16/367_splitncnn_1 .\encode_image-fp16/370 0=64 1=1 5=1 6=16384 9=1
+Convolution              .\encode_image-fp16/Conv_23                  1 1 .\encode_image-fp16/370 .\encode_image-fp16/373 0=64 1=3 4=1 5=1 6=36864 9=1
+Convolution              .\encode_image-fp16/Conv_25                  1 1 .\encode_image-fp16/373 .\encode_image-fp16/682 0=256 1=1 5=1 6=16384
+BinaryOp                 .\encode_image-fp16/Add_26                   2 1 .\encode_image-fp16/682 .\encode_image-fp16/367_splitncnn_0 .\encode_image-fp16/376
+ReLU                     .\encode_image-fp16/Relu_27                  1 1 .\encode_image-fp16/376 .\encode_image-fp16/377
+Split                    .\encode_image-fp16/splitncnn_2              1 2 .\encode_image-fp16/377 .\encode_image-fp16/377_splitncnn_0 .\encode_image-fp16/377_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_28                  1 1 .\encode_image-fp16/377_splitncnn_1 .\encode_image-fp16/380 0=64 1=1 5=1 6=16384 9=1
+Convolution              .\encode_image-fp16/Conv_30                  1 1 .\encode_image-fp16/380 .\encode_image-fp16/383 0=64 1=3 4=1 5=1 6=36864 9=1
+Convolution              .\encode_image-fp16/Conv_32                  1 1 .\encode_image-fp16/383 .\encode_image-fp16/691 0=256 1=1 5=1 6=16384
+BinaryOp                 .\encode_image-fp16/Add_33                   2 1 .\encode_image-fp16/691 .\encode_image-fp16/377_splitncnn_0 .\encode_image-fp16/386
+ReLU                     .\encode_image-fp16/Relu_34                  1 1 .\encode_image-fp16/386 .\encode_image-fp16/387
+Split                    .\encode_image-fp16/splitncnn_3              1 2 .\encode_image-fp16/387 .\encode_image-fp16/387_splitncnn_0 .\encode_image-fp16/387_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_35                  1 1 .\encode_image-fp16/387_splitncnn_1 .\encode_image-fp16/390 0=128 1=1 5=1 6=32768 9=1
+Convolution              .\encode_image-fp16/Conv_37                  1 1 .\encode_image-fp16/390 .\encode_image-fp16/393 0=128 1=3 4=1 5=1 6=147456 9=1
+Pooling                  .\encode_image-fp16/AveragePool_41           1 1 .\encode_image-fp16/393 .\encode_image-fp16/396 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_42                  1 1 .\encode_image-fp16/396 .\encode_image-fp16/700 0=512 1=1 5=1 6=65536
+Pooling                  .\encode_image-fp16/AveragePool_45           1 1 .\encode_image-fp16/387_splitncnn_0 .\encode_image-fp16/401 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_46                  1 1 .\encode_image-fp16/401 .\encode_image-fp16/703 0=512 1=1 5=1 6=131072
+BinaryOp                 .\encode_image-fp16/Add_47                   2 1 .\encode_image-fp16/700 .\encode_image-fp16/703 .\encode_image-fp16/404
+ReLU                     .\encode_image-fp16/Relu_48                  1 1 .\encode_image-fp16/404 .\encode_image-fp16/405
+Split                    .\encode_image-fp16/splitncnn_4              1 2 .\encode_image-fp16/405 .\encode_image-fp16/405_splitncnn_0 .\encode_image-fp16/405_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_49                  1 1 .\encode_image-fp16/405_splitncnn_1 .\encode_image-fp16/408 0=128 1=1 5=1 6=65536 9=1
+Convolution              .\encode_image-fp16/Conv_51                  1 1 .\encode_image-fp16/408 .\encode_image-fp16/411 0=128 1=3 4=1 5=1 6=147456 9=1
+Convolution              .\encode_image-fp16/Conv_53                  1 1 .\encode_image-fp16/411 .\encode_image-fp16/712 0=512 1=1 5=1 6=65536
+BinaryOp                 .\encode_image-fp16/Add_54                   2 1 .\encode_image-fp16/712 .\encode_image-fp16/405_splitncnn_0 .\encode_image-fp16/414
+ReLU                     .\encode_image-fp16/Relu_55                  1 1 .\encode_image-fp16/414 .\encode_image-fp16/415
+Split                    .\encode_image-fp16/splitncnn_5              1 2 .\encode_image-fp16/415 .\encode_image-fp16/415_splitncnn_0 .\encode_image-fp16/415_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_56                  1 1 .\encode_image-fp16/415_splitncnn_1 .\encode_image-fp16/418 0=128 1=1 5=1 6=65536 9=1
+Convolution              .\encode_image-fp16/Conv_58                  1 1 .\encode_image-fp16/418 .\encode_image-fp16/421 0=128 1=3 4=1 5=1 6=147456 9=1
+Convolution              .\encode_image-fp16/Conv_60                  1 1 .\encode_image-fp16/421 .\encode_image-fp16/721 0=512 1=1 5=1 6=65536
+BinaryOp                 .\encode_image-fp16/Add_61                   2 1 .\encode_image-fp16/721 .\encode_image-fp16/415_splitncnn_0 .\encode_image-fp16/424
+ReLU                     .\encode_image-fp16/Relu_62                  1 1 .\encode_image-fp16/424 .\encode_image-fp16/425
+Split                    .\encode_image-fp16/splitncnn_6              1 2 .\encode_image-fp16/425 .\encode_image-fp16/425_splitncnn_0 .\encode_image-fp16/425_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_63                  1 1 .\encode_image-fp16/425_splitncnn_1 .\encode_image-fp16/428 0=128 1=1 5=1 6=65536 9=1
+Convolution              .\encode_image-fp16/Conv_65                  1 1 .\encode_image-fp16/428 .\encode_image-fp16/431 0=128 1=3 4=1 5=1 6=147456 9=1
+Convolution              .\encode_image-fp16/Conv_67                  1 1 .\encode_image-fp16/431 .\encode_image-fp16/730 0=512 1=1 5=1 6=65536
+BinaryOp                 .\encode_image-fp16/Add_68                   2 1 .\encode_image-fp16/730 .\encode_image-fp16/425_splitncnn_0 .\encode_image-fp16/434
+ReLU                     .\encode_image-fp16/Relu_69                  1 1 .\encode_image-fp16/434 .\encode_image-fp16/435
+Split                    .\encode_image-fp16/splitncnn_7              1 2 .\encode_image-fp16/435 .\encode_image-fp16/435_splitncnn_0 .\encode_image-fp16/435_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_70                  1 1 .\encode_image-fp16/435_splitncnn_1 .\encode_image-fp16/438 0=256 1=1 5=1 6=131072 9=1
+Convolution              .\encode_image-fp16/Conv_72                  1 1 .\encode_image-fp16/438 .\encode_image-fp16/441 0=256 1=3 4=1 5=1 6=589824 9=1
+Pooling                  .\encode_image-fp16/AveragePool_76           1 1 .\encode_image-fp16/441 .\encode_image-fp16/444 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_77                  1 1 .\encode_image-fp16/444 .\encode_image-fp16/739 0=1024 1=1 5=1 6=262144
+Pooling                  .\encode_image-fp16/AveragePool_80           1 1 .\encode_image-fp16/435_splitncnn_0 .\encode_image-fp16/449 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_81                  1 1 .\encode_image-fp16/449 .\encode_image-fp16/742 0=1024 1=1 5=1 6=524288
+BinaryOp                 .\encode_image-fp16/Add_82                   2 1 .\encode_image-fp16/739 .\encode_image-fp16/742 .\encode_image-fp16/452
+ReLU                     .\encode_image-fp16/Relu_83                  1 1 .\encode_image-fp16/452 .\encode_image-fp16/453
+Split                    .\encode_image-fp16/splitncnn_8              1 2 .\encode_image-fp16/453 .\encode_image-fp16/453_splitncnn_0 .\encode_image-fp16/453_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_84                  1 1 .\encode_image-fp16/453_splitncnn_1 .\encode_image-fp16/456 0=256 1=1 5=1 6=262144 9=1
+Convolution              .\encode_image-fp16/Conv_86                  1 1 .\encode_image-fp16/456 .\encode_image-fp16/459 0=256 1=3 4=1 5=1 6=589824 9=1
+Convolution              .\encode_image-fp16/Conv_88                  1 1 .\encode_image-fp16/459 .\encode_image-fp16/751 0=1024 1=1 5=1 6=262144
+BinaryOp                 .\encode_image-fp16/Add_89                   2 1 .\encode_image-fp16/751 .\encode_image-fp16/453_splitncnn_0 .\encode_image-fp16/462
+ReLU                     .\encode_image-fp16/Relu_90                  1 1 .\encode_image-fp16/462 .\encode_image-fp16/463
+Split                    .\encode_image-fp16/splitncnn_9              1 2 .\encode_image-fp16/463 .\encode_image-fp16/463_splitncnn_0 .\encode_image-fp16/463_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_91                  1 1 .\encode_image-fp16/463_splitncnn_1 .\encode_image-fp16/466 0=256 1=1 5=1 6=262144 9=1
+Convolution              .\encode_image-fp16/Conv_93                  1 1 .\encode_image-fp16/466 .\encode_image-fp16/469 0=256 1=3 4=1 5=1 6=589824 9=1
+Convolution              .\encode_image-fp16/Conv_95                  1 1 .\encode_image-fp16/469 .\encode_image-fp16/760 0=1024 1=1 5=1 6=262144
+BinaryOp                 .\encode_image-fp16/Add_96                   2 1 .\encode_image-fp16/760 .\encode_image-fp16/463_splitncnn_0 .\encode_image-fp16/472
+ReLU                     .\encode_image-fp16/Relu_97                  1 1 .\encode_image-fp16/472 .\encode_image-fp16/473
+Split                    .\encode_image-fp16/splitncnn_10             1 2 .\encode_image-fp16/473 .\encode_image-fp16/473_splitncnn_0 .\encode_image-fp16/473_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_98                  1 1 .\encode_image-fp16/473_splitncnn_1 .\encode_image-fp16/476 0=256 1=1 5=1 6=262144 9=1
+Convolution              .\encode_image-fp16/Conv_100                 1 1 .\encode_image-fp16/476 .\encode_image-fp16/479 0=256 1=3 4=1 5=1 6=589824 9=1
+Convolution              .\encode_image-fp16/Conv_102                 1 1 .\encode_image-fp16/479 .\encode_image-fp16/769 0=1024 1=1 5=1 6=262144
+BinaryOp                 .\encode_image-fp16/Add_103                  2 1 .\encode_image-fp16/769 .\encode_image-fp16/473_splitncnn_0 .\encode_image-fp16/482
+ReLU                     .\encode_image-fp16/Relu_104                 1 1 .\encode_image-fp16/482 .\encode_image-fp16/483
+Split                    .\encode_image-fp16/splitncnn_11             1 2 .\encode_image-fp16/483 .\encode_image-fp16/483_splitncnn_0 .\encode_image-fp16/483_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_105                 1 1 .\encode_image-fp16/483_splitncnn_1 .\encode_image-fp16/486 0=256 1=1 5=1 6=262144 9=1
+Convolution              .\encode_image-fp16/Conv_107                 1 1 .\encode_image-fp16/486 .\encode_image-fp16/489 0=256 1=3 4=1 5=1 6=589824 9=1
+Convolution              .\encode_image-fp16/Conv_109                 1 1 .\encode_image-fp16/489 .\encode_image-fp16/778 0=1024 1=1 5=1 6=262144
+BinaryOp                 .\encode_image-fp16/Add_110                  2 1 .\encode_image-fp16/778 .\encode_image-fp16/483_splitncnn_0 .\encode_image-fp16/492
+ReLU                     .\encode_image-fp16/Relu_111                 1 1 .\encode_image-fp16/492 .\encode_image-fp16/493
+Split                    .\encode_image-fp16/splitncnn_12             1 2 .\encode_image-fp16/493 .\encode_image-fp16/493_splitncnn_0 .\encode_image-fp16/493_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_112                 1 1 .\encode_image-fp16/493_splitncnn_1 .\encode_image-fp16/496 0=256 1=1 5=1 6=262144 9=1
+Convolution              .\encode_image-fp16/Conv_114                 1 1 .\encode_image-fp16/496 .\encode_image-fp16/499 0=256 1=3 4=1 5=1 6=589824 9=1
+Convolution              .\encode_image-fp16/Conv_116                 1 1 .\encode_image-fp16/499 .\encode_image-fp16/787 0=1024 1=1 5=1 6=262144
+BinaryOp                 .\encode_image-fp16/Add_117                  2 1 .\encode_image-fp16/787 .\encode_image-fp16/493_splitncnn_0 .\encode_image-fp16/502
+ReLU                     .\encode_image-fp16/Relu_118                 1 1 .\encode_image-fp16/502 .\encode_image-fp16/503
+Split                    .\encode_image-fp16/splitncnn_13             1 2 .\encode_image-fp16/503 .\encode_image-fp16/503_splitncnn_0 .\encode_image-fp16/503_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_119                 1 1 .\encode_image-fp16/503_splitncnn_1 .\encode_image-fp16/506 0=512 1=1 5=1 6=524288 9=1
+Convolution              .\encode_image-fp16/Conv_121                 1 1 .\encode_image-fp16/506 .\encode_image-fp16/509 0=512 1=3 4=1 5=1 6=2359296 9=1
+Pooling                  .\encode_image-fp16/AveragePool_125          1 1 .\encode_image-fp16/509 .\encode_image-fp16/512 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_126                 1 1 .\encode_image-fp16/512 .\encode_image-fp16/796 0=2048 1=1 5=1 6=1048576
+Pooling                  .\encode_image-fp16/AveragePool_129          1 1 .\encode_image-fp16/503_splitncnn_0 .\encode_image-fp16/517 0=1 1=2 2=2 5=1
+Convolution              .\encode_image-fp16/Conv_130                 1 1 .\encode_image-fp16/517 .\encode_image-fp16/799 0=2048 1=1 5=1 6=2097152
+BinaryOp                 .\encode_image-fp16/Add_131                  2 1 .\encode_image-fp16/796 .\encode_image-fp16/799 .\encode_image-fp16/520
+ReLU                     .\encode_image-fp16/Relu_132                 1 1 .\encode_image-fp16/520 .\encode_image-fp16/521
+Split                    .\encode_image-fp16/splitncnn_14             1 2 .\encode_image-fp16/521 .\encode_image-fp16/521_splitncnn_0 .\encode_image-fp16/521_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_133                 1 1 .\encode_image-fp16/521_splitncnn_1 .\encode_image-fp16/524 0=512 1=1 5=1 6=1048576 9=1
+Convolution              .\encode_image-fp16/Conv_135                 1 1 .\encode_image-fp16/524 .\encode_image-fp16/527 0=512 1=3 4=1 5=1 6=2359296 9=1
+Convolution              .\encode_image-fp16/Conv_137                 1 1 .\encode_image-fp16/527 .\encode_image-fp16/808 0=2048 1=1 5=1 6=1048576
+BinaryOp                 .\encode_image-fp16/Add_138                  2 1 .\encode_image-fp16/808 .\encode_image-fp16/521_splitncnn_0 .\encode_image-fp16/530
+ReLU                     .\encode_image-fp16/Relu_139                 1 1 .\encode_image-fp16/530 .\encode_image-fp16/531
+Split                    .\encode_image-fp16/splitncnn_15             1 2 .\encode_image-fp16/531 .\encode_image-fp16/531_splitncnn_0 .\encode_image-fp16/531_splitncnn_1
+Convolution              .\encode_image-fp16/Conv_140                 1 1 .\encode_image-fp16/531_splitncnn_1 .\encode_image-fp16/534 0=512 1=1 5=1 6=1048576 9=1
+Convolution              .\encode_image-fp16/Conv_142                 1 1 .\encode_image-fp16/534 .\encode_image-fp16/537 0=512 1=3 4=1 5=1 6=2359296 9=1
+Convolution              .\encode_image-fp16/Conv_144                 1 1 .\encode_image-fp16/537 .\encode_image-fp16/817 0=2048 1=1 5=1 6=1048576
+BinaryOp                 .\encode_image-fp16/Add_145                  2 1 .\encode_image-fp16/817 .\encode_image-fp16/531_splitncnn_0 .\encode_image-fp16/540
+ReLU                     .\encode_image-fp16/Relu_146                 1 1 .\encode_image-fp16/540 .\encode_image-fp16/541
+Reshape                  .\encode_image-fp16/Reshape_164              1 1 .\encode_image-fp16/541 .\encode_image-fp16/559 0=49 1=2048
+Permute                  .\encode_image-fp16/Transpose_165            1 1 .\encode_image-fp16/559 .\encode_image-fp16/560 0=1
+Split                    .\encode_image-fp16/splitncnn_16             1 2 .\encode_image-fp16/560 .\encode_image-fp16/560_splitncnn_0 .\encode_image-fp16/560_splitncnn_1
+Reduction                .\encode_image-fp16/ReduceMean_166           1 1 .\encode_image-fp16/560_splitncnn_1 .\encode_image-fp16/561 0=3 1=0 -23303=1,0 4=1 5=1
+Concat                   .\encode_image-fp16/Concat_167               2 1 .\encode_image-fp16/561 .\encode_image-fp16/560_splitncnn_0 .\encode_image-fp16/562
+BinaryOp                 .\encode_image-fp16/Add_168                  2 1 .\encode_image-fp16/562 .\encode_image-fp16/821 .\encode_image-fp16/565
+Split                    .\encode_image-fp16/splitncnn_17             1 3 .\encode_image-fp16/565 .\encode_image-fp16/565_splitncnn_0 .\encode_image-fp16/565_splitncnn_1 .\encode_image-fp16/565_splitncnn_2
+InnerProduct             .\encode_image-fp16/MatMul_185               1 1 .\encode_image-fp16/565_splitncnn_2 .\encode_image-fp16/589 0=2048 1=1 2=4194304
+InnerProduct             .\encode_image-fp16/MatMul_193               1 1 .\encode_image-fp16/565_splitncnn_1 .\encode_image-fp16/600 0=2048 1=1 2=4194304
+InnerProduct             .\encode_image-fp16/MatMul_200               1 1 .\encode_image-fp16/565_splitncnn_0 .\encode_image-fp16/612 0=2048 1=1 2=4194304
+BinaryOp                 .\encode_image-fp16/Mul_203                  1 1 .\encode_image-fp16/589 .\encode_image-fp16/614 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_image-fp16/Reshape_210              1 1 .\encode_image-fp16/614 .\encode_image-fp16/621 0=64 1=32 2=50
+Permute                  .\encode_image-fp16/Transpose_211            1 1 .\encode_image-fp16/621 .\encode_image-fp16/622 0=2
+Reshape                  .\encode_image-fp16/Reshape_217              1 1 .\encode_image-fp16/600 .\encode_image-fp16/630 0=64 1=32 2=50
+Reshape                  .\encode_image-fp16/Reshape_223              1 1 .\encode_image-fp16/612 .\encode_image-fp16/638 0=64 1=32 2=50
+Permute                  .\encode_image-fp16/Transpose_224            1 1 .\encode_image-fp16/638 .\encode_image-fp16/639 0=2
+Permute                  .\encode_image-fp16/Transpose_225            1 1 .\encode_image-fp16/630 .\encode_image-fp16/640 0=3
+MatMul                   .\encode_image-fp16/MatMul_226               2 1 .\encode_image-fp16/622 .\encode_image-fp16/640 .\encode_image-fp16/641
+Softmax                  .\encode_image-fp16/Softmax_227              1 1 .\encode_image-fp16/641 .\encode_image-fp16/642 0=-1 1=1
+MatMul                   .\encode_image-fp16/MatMul_228               2 1 .\encode_image-fp16/642 .\encode_image-fp16/639 .\encode_image-fp16/643
+Permute                  .\encode_image-fp16/Transpose_229            1 1 .\encode_image-fp16/643 .\encode_image-fp16/644 0=2
+Reshape                  .\encode_image-fp16/Reshape_234              1 1 .\encode_image-fp16/644 .\encode_image-fp16/649 0=2048 1=50
+InnerProduct             .\encode_image-fp16/MatMul_235               1 1 .\encode_image-fp16/649 .\encode_image-fp16/652 0=1024 1=1 2=2097152
+Input                    .\encode_text-fp16/input.1                  0 1 .\encode_text-fp16/input.1
+MemoryData               .\encode_text-fp16/1750                     0 1 .\encode_text-fp16/1750 0=2
+MemoryData               .\encode_text-fp16/1753                     0 1 .\encode_text-fp16/1753 0=512 1=77
+MemoryData               .\encode_text-fp16/511                      0 1 .\encode_text-fp16/511 0=2
+MemoryData               .\encode_text-fp16/558                      0 1 .\encode_text-fp16/558 0=77 1=77 2=8
+Split                    .\encode_text-fp16/splitncnn_0              1 12 .\encode_text-fp16/558 .\encode_text-fp16/558_splitncnn_0 .\encode_text-fp16/558_splitncnn_1 .\encode_text-fp16/558_splitncnn_2 .\encode_text-fp16/558_splitncnn_3 .\encode_text-fp16/558_splitncnn_4 .\encode_text-fp16/558_splitncnn_5 .\encode_text-fp16/558_splitncnn_6 .\encode_text-fp16/558_splitncnn_7 .\encode_text-fp16/558_splitncnn_8 .\encode_text-fp16/558_splitncnn_9 .\encode_text-fp16/558_splitncnn_10 .\encode_text-fp16/558_splitncnn_11
+MemoryData               .\encode_text-fp16/token_embedding.weight   0 1 .\encode_text-fp16/token_embedding.weight 0=512 1=49408
+Gather                   .\encode_text-fp16/Gather_0                 2 1 .\encode_text-fp16/token_embedding.weight .\encode_text-fp16/input.1 .\encode_text-fp16/490
+BinaryOp                 .\encode_text-fp16/Add_2                    2 1 .\encode_text-fp16/490 .\encode_text-fp16/1753 .\encode_text-fp16/493
+Split                    .\encode_text-fp16/splitncnn_1              1 2 .\encode_text-fp16/493 .\encode_text-fp16/494_splitncnn_0 .\encode_text-fp16/494_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_15                   1 1 .\encode_text-fp16/494_splitncnn_1 .\encode_text-fp16/508 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_30                1 1 .\encode_text-fp16/508 .\encode_text-fp16/525 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_32                 1 3 .\encode_text-fp16/525 .\encode_text-fp16/526 .\encode_text-fp16/527 .\encode_text-fp16/528 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_34                   1 1 .\encode_text-fp16/526 .\encode_text-fp16/530 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_41               1 1 .\encode_text-fp16/530 .\encode_text-fp16/537 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_42             1 1 .\encode_text-fp16/537 .\encode_text-fp16/538 0=2
+Reshape                  .\encode_text-fp16/Reshape_48               1 1 .\encode_text-fp16/527 .\encode_text-fp16/546 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_54               1 1 .\encode_text-fp16/528 .\encode_text-fp16/554 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_55             1 1 .\encode_text-fp16/554 .\encode_text-fp16/555 0=2
+Permute                  .\encode_text-fp16/Transpose_56             1 1 .\encode_text-fp16/546 .\encode_text-fp16/556 0=3
+MatMul                   .\encode_text-fp16/MatMul_57                2 1 .\encode_text-fp16/538 .\encode_text-fp16/556 .\encode_text-fp16/557
+BinaryOp                 .\encode_text-fp16/Add_59                   2 1 .\encode_text-fp16/557 .\encode_text-fp16/558_splitncnn_11 .\encode_text-fp16/559
+Softmax                  .\encode_text-fp16/Softmax_60               1 1 .\encode_text-fp16/559 .\encode_text-fp16/560 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_61                2 1 .\encode_text-fp16/560 .\encode_text-fp16/555 .\encode_text-fp16/561
+Permute                  .\encode_text-fp16/Transpose_62             1 1 .\encode_text-fp16/561 .\encode_text-fp16/562 0=2
+Reshape                  .\encode_text-fp16/Reshape_67               1 1 .\encode_text-fp16/562 .\encode_text-fp16/567 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_68                1 1 .\encode_text-fp16/567 .\encode_text-fp16/570 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_70                   2 1 .\encode_text-fp16/494_splitncnn_0 .\encode_text-fp16/570 .\encode_text-fp16/571
+Split                    .\encode_text-fp16/splitncnn_2              1 2 .\encode_text-fp16/571 .\encode_text-fp16/571_splitncnn_0 .\encode_text-fp16/571_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_82                   1 1 .\encode_text-fp16/571_splitncnn_1 .\encode_text-fp16/585 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_84                1 1 .\encode_text-fp16/585 .\encode_text-fp16/589 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_3              1 2 .\encode_text-fp16/589 .\encode_text-fp16/589_splitncnn_0 .\encode_text-fp16/589_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_87                   1 1 .\encode_text-fp16/589_splitncnn_1 .\encode_text-fp16/591 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_88               1 1 .\encode_text-fp16/591 .\encode_text-fp16/592
+BinaryOp                 .\encode_text-fp16/Mul_89                   2 1 .\encode_text-fp16/589_splitncnn_0 .\encode_text-fp16/592 .\encode_text-fp16/593 0=2
+InnerProduct             .\encode_text-fp16/MatMul_90                1 1 .\encode_text-fp16/593 .\encode_text-fp16/596 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_92                   2 1 .\encode_text-fp16/571_splitncnn_0 .\encode_text-fp16/596 .\encode_text-fp16/597
+Split                    .\encode_text-fp16/splitncnn_4              1 2 .\encode_text-fp16/597 .\encode_text-fp16/597_splitncnn_0 .\encode_text-fp16/597_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_104                  1 1 .\encode_text-fp16/597_splitncnn_1 .\encode_text-fp16/611 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_119               1 1 .\encode_text-fp16/611 .\encode_text-fp16/628 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_121                1 3 .\encode_text-fp16/628 .\encode_text-fp16/629 .\encode_text-fp16/630 .\encode_text-fp16/631 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_123                  1 1 .\encode_text-fp16/629 .\encode_text-fp16/633 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_130              1 1 .\encode_text-fp16/633 .\encode_text-fp16/640 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_131            1 1 .\encode_text-fp16/640 .\encode_text-fp16/641 0=2
+Reshape                  .\encode_text-fp16/Reshape_137              1 1 .\encode_text-fp16/630 .\encode_text-fp16/649 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_143              1 1 .\encode_text-fp16/631 .\encode_text-fp16/657 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_144            1 1 .\encode_text-fp16/657 .\encode_text-fp16/658 0=2
+Permute                  .\encode_text-fp16/Transpose_145            1 1 .\encode_text-fp16/649 .\encode_text-fp16/659 0=3
+MatMul                   .\encode_text-fp16/MatMul_146               2 1 .\encode_text-fp16/641 .\encode_text-fp16/659 .\encode_text-fp16/660
+BinaryOp                 .\encode_text-fp16/Add_148                  2 1 .\encode_text-fp16/660 .\encode_text-fp16/558_splitncnn_10 .\encode_text-fp16/662
+Softmax                  .\encode_text-fp16/Softmax_149              1 1 .\encode_text-fp16/662 .\encode_text-fp16/663 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_150               2 1 .\encode_text-fp16/663 .\encode_text-fp16/658 .\encode_text-fp16/664
+Permute                  .\encode_text-fp16/Transpose_151            1 1 .\encode_text-fp16/664 .\encode_text-fp16/665 0=2
+Reshape                  .\encode_text-fp16/Reshape_156              1 1 .\encode_text-fp16/665 .\encode_text-fp16/670 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_157               1 1 .\encode_text-fp16/670 .\encode_text-fp16/673 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_159                  2 1 .\encode_text-fp16/597_splitncnn_0 .\encode_text-fp16/673 .\encode_text-fp16/674
+Split                    .\encode_text-fp16/splitncnn_5              1 2 .\encode_text-fp16/674 .\encode_text-fp16/674_splitncnn_0 .\encode_text-fp16/674_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_171                  1 1 .\encode_text-fp16/674_splitncnn_1 .\encode_text-fp16/688 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_173               1 1 .\encode_text-fp16/688 .\encode_text-fp16/692 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_6              1 2 .\encode_text-fp16/692 .\encode_text-fp16/692_splitncnn_0 .\encode_text-fp16/692_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_176                  1 1 .\encode_text-fp16/692_splitncnn_1 .\encode_text-fp16/694 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_177              1 1 .\encode_text-fp16/694 .\encode_text-fp16/695
+BinaryOp                 .\encode_text-fp16/Mul_178                  2 1 .\encode_text-fp16/692_splitncnn_0 .\encode_text-fp16/695 .\encode_text-fp16/696 0=2
+InnerProduct             .\encode_text-fp16/MatMul_179               1 1 .\encode_text-fp16/696 .\encode_text-fp16/699 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_181                  2 1 .\encode_text-fp16/674_splitncnn_0 .\encode_text-fp16/699 .\encode_text-fp16/700
+Split                    .\encode_text-fp16/splitncnn_7              1 2 .\encode_text-fp16/700 .\encode_text-fp16/700_splitncnn_0 .\encode_text-fp16/700_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_193                  1 1 .\encode_text-fp16/700_splitncnn_1 .\encode_text-fp16/714 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_208               1 1 .\encode_text-fp16/714 .\encode_text-fp16/731 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_210                1 3 .\encode_text-fp16/731 .\encode_text-fp16/732 .\encode_text-fp16/733 .\encode_text-fp16/734 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_212                  1 1 .\encode_text-fp16/732 .\encode_text-fp16/736 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_219              1 1 .\encode_text-fp16/736 .\encode_text-fp16/743 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_220            1 1 .\encode_text-fp16/743 .\encode_text-fp16/744 0=2
+Reshape                  .\encode_text-fp16/Reshape_226              1 1 .\encode_text-fp16/733 .\encode_text-fp16/752 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_232              1 1 .\encode_text-fp16/734 .\encode_text-fp16/760 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_233            1 1 .\encode_text-fp16/760 .\encode_text-fp16/761 0=2
+Permute                  .\encode_text-fp16/Transpose_234            1 1 .\encode_text-fp16/752 .\encode_text-fp16/762 0=3
+MatMul                   .\encode_text-fp16/MatMul_235               2 1 .\encode_text-fp16/744 .\encode_text-fp16/762 .\encode_text-fp16/763
+BinaryOp                 .\encode_text-fp16/Add_237                  2 1 .\encode_text-fp16/763 .\encode_text-fp16/558_splitncnn_9 .\encode_text-fp16/765
+Softmax                  .\encode_text-fp16/Softmax_238              1 1 .\encode_text-fp16/765 .\encode_text-fp16/766 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_239               2 1 .\encode_text-fp16/766 .\encode_text-fp16/761 .\encode_text-fp16/767
+Permute                  .\encode_text-fp16/Transpose_240            1 1 .\encode_text-fp16/767 .\encode_text-fp16/768 0=2
+Reshape                  .\encode_text-fp16/Reshape_245              1 1 .\encode_text-fp16/768 .\encode_text-fp16/773 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_246               1 1 .\encode_text-fp16/773 .\encode_text-fp16/776 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_248                  2 1 .\encode_text-fp16/700_splitncnn_0 .\encode_text-fp16/776 .\encode_text-fp16/777
+Split                    .\encode_text-fp16/splitncnn_8              1 2 .\encode_text-fp16/777 .\encode_text-fp16/777_splitncnn_0 .\encode_text-fp16/777_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_260                  1 1 .\encode_text-fp16/777_splitncnn_1 .\encode_text-fp16/791 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_262               1 1 .\encode_text-fp16/791 .\encode_text-fp16/795 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_9              1 2 .\encode_text-fp16/795 .\encode_text-fp16/795_splitncnn_0 .\encode_text-fp16/795_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_265                  1 1 .\encode_text-fp16/795_splitncnn_1 .\encode_text-fp16/797 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_266              1 1 .\encode_text-fp16/797 .\encode_text-fp16/798
+BinaryOp                 .\encode_text-fp16/Mul_267                  2 1 .\encode_text-fp16/795_splitncnn_0 .\encode_text-fp16/798 .\encode_text-fp16/799 0=2
+InnerProduct             .\encode_text-fp16/MatMul_268               1 1 .\encode_text-fp16/799 .\encode_text-fp16/802 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_270                  2 1 .\encode_text-fp16/777_splitncnn_0 .\encode_text-fp16/802 .\encode_text-fp16/803
+Split                    .\encode_text-fp16/splitncnn_10             1 2 .\encode_text-fp16/803 .\encode_text-fp16/803_splitncnn_0 .\encode_text-fp16/803_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_282                  1 1 .\encode_text-fp16/803_splitncnn_1 .\encode_text-fp16/817 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_297               1 1 .\encode_text-fp16/817 .\encode_text-fp16/834 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_299                1 3 .\encode_text-fp16/834 .\encode_text-fp16/835 .\encode_text-fp16/836 .\encode_text-fp16/837 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_301                  1 1 .\encode_text-fp16/835 .\encode_text-fp16/839 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_308              1 1 .\encode_text-fp16/839 .\encode_text-fp16/846 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_309            1 1 .\encode_text-fp16/846 .\encode_text-fp16/847 0=2
+Reshape                  .\encode_text-fp16/Reshape_315              1 1 .\encode_text-fp16/836 .\encode_text-fp16/855 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_321              1 1 .\encode_text-fp16/837 .\encode_text-fp16/863 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_322            1 1 .\encode_text-fp16/863 .\encode_text-fp16/864 0=2
+Permute                  .\encode_text-fp16/Transpose_323            1 1 .\encode_text-fp16/855 .\encode_text-fp16/865 0=3
+MatMul                   .\encode_text-fp16/MatMul_324               2 1 .\encode_text-fp16/847 .\encode_text-fp16/865 .\encode_text-fp16/866
+BinaryOp                 .\encode_text-fp16/Add_326                  2 1 .\encode_text-fp16/866 .\encode_text-fp16/558_splitncnn_8 .\encode_text-fp16/868
+Softmax                  .\encode_text-fp16/Softmax_327              1 1 .\encode_text-fp16/868 .\encode_text-fp16/869 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_328               2 1 .\encode_text-fp16/869 .\encode_text-fp16/864 .\encode_text-fp16/870
+Permute                  .\encode_text-fp16/Transpose_329            1 1 .\encode_text-fp16/870 .\encode_text-fp16/871 0=2
+Reshape                  .\encode_text-fp16/Reshape_334              1 1 .\encode_text-fp16/871 .\encode_text-fp16/876 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_335               1 1 .\encode_text-fp16/876 .\encode_text-fp16/879 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_337                  2 1 .\encode_text-fp16/803_splitncnn_0 .\encode_text-fp16/879 .\encode_text-fp16/880
+Split                    .\encode_text-fp16/splitncnn_11             1 2 .\encode_text-fp16/880 .\encode_text-fp16/880_splitncnn_0 .\encode_text-fp16/880_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_349                  1 1 .\encode_text-fp16/880_splitncnn_1 .\encode_text-fp16/894 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_351               1 1 .\encode_text-fp16/894 .\encode_text-fp16/898 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_12             1 2 .\encode_text-fp16/898 .\encode_text-fp16/898_splitncnn_0 .\encode_text-fp16/898_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_354                  1 1 .\encode_text-fp16/898_splitncnn_1 .\encode_text-fp16/900 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_355              1 1 .\encode_text-fp16/900 .\encode_text-fp16/901
+BinaryOp                 .\encode_text-fp16/Mul_356                  2 1 .\encode_text-fp16/898_splitncnn_0 .\encode_text-fp16/901 .\encode_text-fp16/902 0=2
+InnerProduct             .\encode_text-fp16/MatMul_357               1 1 .\encode_text-fp16/902 .\encode_text-fp16/905 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_359                  2 1 .\encode_text-fp16/880_splitncnn_0 .\encode_text-fp16/905 .\encode_text-fp16/906
+Split                    .\encode_text-fp16/splitncnn_13             1 2 .\encode_text-fp16/906 .\encode_text-fp16/906_splitncnn_0 .\encode_text-fp16/906_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_371                  1 1 .\encode_text-fp16/906_splitncnn_1 .\encode_text-fp16/920 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_386               1 1 .\encode_text-fp16/920 .\encode_text-fp16/937 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_388                1 3 .\encode_text-fp16/937 .\encode_text-fp16/938 .\encode_text-fp16/939 .\encode_text-fp16/940 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_390                  1 1 .\encode_text-fp16/938 .\encode_text-fp16/942 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_397              1 1 .\encode_text-fp16/942 .\encode_text-fp16/949 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_398            1 1 .\encode_text-fp16/949 .\encode_text-fp16/950 0=2
+Reshape                  .\encode_text-fp16/Reshape_404              1 1 .\encode_text-fp16/939 .\encode_text-fp16/958 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_410              1 1 .\encode_text-fp16/940 .\encode_text-fp16/966 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_411            1 1 .\encode_text-fp16/966 .\encode_text-fp16/967 0=2
+Permute                  .\encode_text-fp16/Transpose_412            1 1 .\encode_text-fp16/958 .\encode_text-fp16/968 0=3
+MatMul                   .\encode_text-fp16/MatMul_413               2 1 .\encode_text-fp16/950 .\encode_text-fp16/968 .\encode_text-fp16/969
+BinaryOp                 .\encode_text-fp16/Add_415                  2 1 .\encode_text-fp16/969 .\encode_text-fp16/558_splitncnn_7 .\encode_text-fp16/971
+Softmax                  .\encode_text-fp16/Softmax_416              1 1 .\encode_text-fp16/971 .\encode_text-fp16/972 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_417               2 1 .\encode_text-fp16/972 .\encode_text-fp16/967 .\encode_text-fp16/973
+Permute                  .\encode_text-fp16/Transpose_418            1 1 .\encode_text-fp16/973 .\encode_text-fp16/974 0=2
+Reshape                  .\encode_text-fp16/Reshape_423              1 1 .\encode_text-fp16/974 .\encode_text-fp16/979 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_424               1 1 .\encode_text-fp16/979 .\encode_text-fp16/982 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_426                  2 1 .\encode_text-fp16/906_splitncnn_0 .\encode_text-fp16/982 .\encode_text-fp16/983
+Split                    .\encode_text-fp16/splitncnn_14             1 2 .\encode_text-fp16/983 .\encode_text-fp16/983_splitncnn_0 .\encode_text-fp16/983_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_438                  1 1 .\encode_text-fp16/983_splitncnn_1 .\encode_text-fp16/997 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_440               1 1 .\encode_text-fp16/997 .\encode_text-fp16/1001 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_15             1 2 .\encode_text-fp16/1001 .\encode_text-fp16/1001_splitncnn_0 .\encode_text-fp16/1001_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_443                  1 1 .\encode_text-fp16/1001_splitncnn_1 .\encode_text-fp16/1003 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_444              1 1 .\encode_text-fp16/1003 .\encode_text-fp16/1004
+BinaryOp                 .\encode_text-fp16/Mul_445                  2 1 .\encode_text-fp16/1001_splitncnn_0 .\encode_text-fp16/1004 .\encode_text-fp16/1005 0=2
+InnerProduct             .\encode_text-fp16/MatMul_446               1 1 .\encode_text-fp16/1005 .\encode_text-fp16/1008 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_448                  2 1 .\encode_text-fp16/983_splitncnn_0 .\encode_text-fp16/1008 .\encode_text-fp16/1009
+Split                    .\encode_text-fp16/splitncnn_16             1 2 .\encode_text-fp16/1009 .\encode_text-fp16/1009_splitncnn_0 .\encode_text-fp16/1009_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_460                  1 1 .\encode_text-fp16/1009_splitncnn_1 .\encode_text-fp16/1023 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_475               1 1 .\encode_text-fp16/1023 .\encode_text-fp16/1040 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_477                1 3 .\encode_text-fp16/1040 .\encode_text-fp16/1041 .\encode_text-fp16/1042 .\encode_text-fp16/1043 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_479                  1 1 .\encode_text-fp16/1041 .\encode_text-fp16/1045 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_486              1 1 .\encode_text-fp16/1045 .\encode_text-fp16/1052 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_487            1 1 .\encode_text-fp16/1052 .\encode_text-fp16/1053 0=2
+Reshape                  .\encode_text-fp16/Reshape_493              1 1 .\encode_text-fp16/1042 .\encode_text-fp16/1061 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_499              1 1 .\encode_text-fp16/1043 .\encode_text-fp16/1069 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_500            1 1 .\encode_text-fp16/1069 .\encode_text-fp16/1070 0=2
+Permute                  .\encode_text-fp16/Transpose_501            1 1 .\encode_text-fp16/1061 .\encode_text-fp16/1071 0=3
+MatMul                   .\encode_text-fp16/MatMul_502               2 1 .\encode_text-fp16/1053 .\encode_text-fp16/1071 .\encode_text-fp16/1072
+BinaryOp                 .\encode_text-fp16/Add_504                  2 1 .\encode_text-fp16/1072 .\encode_text-fp16/558_splitncnn_6 .\encode_text-fp16/1074
+Softmax                  .\encode_text-fp16/Softmax_505              1 1 .\encode_text-fp16/1074 .\encode_text-fp16/1075 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_506               2 1 .\encode_text-fp16/1075 .\encode_text-fp16/1070 .\encode_text-fp16/1076
+Permute                  .\encode_text-fp16/Transpose_507            1 1 .\encode_text-fp16/1076 .\encode_text-fp16/1077 0=2
+Reshape                  .\encode_text-fp16/Reshape_512              1 1 .\encode_text-fp16/1077 .\encode_text-fp16/1082 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_513               1 1 .\encode_text-fp16/1082 .\encode_text-fp16/1085 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_515                  2 1 .\encode_text-fp16/1009_splitncnn_0 .\encode_text-fp16/1085 .\encode_text-fp16/1086
+Split                    .\encode_text-fp16/splitncnn_17             1 2 .\encode_text-fp16/1086 .\encode_text-fp16/1086_splitncnn_0 .\encode_text-fp16/1086_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_527                  1 1 .\encode_text-fp16/1086_splitncnn_1 .\encode_text-fp16/1100 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_529               1 1 .\encode_text-fp16/1100 .\encode_text-fp16/1104 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_18             1 2 .\encode_text-fp16/1104 .\encode_text-fp16/1104_splitncnn_0 .\encode_text-fp16/1104_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_532                  1 1 .\encode_text-fp16/1104_splitncnn_1 .\encode_text-fp16/1106 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_533              1 1 .\encode_text-fp16/1106 .\encode_text-fp16/1107
+BinaryOp                 .\encode_text-fp16/Mul_534                  2 1 .\encode_text-fp16/1104_splitncnn_0 .\encode_text-fp16/1107 .\encode_text-fp16/1108 0=2
+InnerProduct             .\encode_text-fp16/MatMul_535               1 1 .\encode_text-fp16/1108 .\encode_text-fp16/1111 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_537                  2 1 .\encode_text-fp16/1086_splitncnn_0 .\encode_text-fp16/1111 .\encode_text-fp16/1112
+Split                    .\encode_text-fp16/splitncnn_19             1 2 .\encode_text-fp16/1112 .\encode_text-fp16/1112_splitncnn_0 .\encode_text-fp16/1112_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_549                  1 1 .\encode_text-fp16/1112_splitncnn_1 .\encode_text-fp16/1126 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_564               1 1 .\encode_text-fp16/1126 .\encode_text-fp16/1143 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_566                1 3 .\encode_text-fp16/1143 .\encode_text-fp16/1144 .\encode_text-fp16/1145 .\encode_text-fp16/1146 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_568                  1 1 .\encode_text-fp16/1144 .\encode_text-fp16/1148 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_575              1 1 .\encode_text-fp16/1148 .\encode_text-fp16/1155 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_576            1 1 .\encode_text-fp16/1155 .\encode_text-fp16/1156 0=2
+Reshape                  .\encode_text-fp16/Reshape_582              1 1 .\encode_text-fp16/1145 .\encode_text-fp16/1164 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_588              1 1 .\encode_text-fp16/1146 .\encode_text-fp16/1172 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_589            1 1 .\encode_text-fp16/1172 .\encode_text-fp16/1173 0=2
+Permute                  .\encode_text-fp16/Transpose_590            1 1 .\encode_text-fp16/1164 .\encode_text-fp16/1174 0=3
+MatMul                   .\encode_text-fp16/MatMul_591               2 1 .\encode_text-fp16/1156 .\encode_text-fp16/1174 .\encode_text-fp16/1175
+BinaryOp                 .\encode_text-fp16/Add_593                  2 1 .\encode_text-fp16/1175 .\encode_text-fp16/558_splitncnn_5 .\encode_text-fp16/1177
+Softmax                  .\encode_text-fp16/Softmax_594              1 1 .\encode_text-fp16/1177 .\encode_text-fp16/1178 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_595               2 1 .\encode_text-fp16/1178 .\encode_text-fp16/1173 .\encode_text-fp16/1179
+Permute                  .\encode_text-fp16/Transpose_596            1 1 .\encode_text-fp16/1179 .\encode_text-fp16/1180 0=2
+Reshape                  .\encode_text-fp16/Reshape_601              1 1 .\encode_text-fp16/1180 .\encode_text-fp16/1185 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_602               1 1 .\encode_text-fp16/1185 .\encode_text-fp16/1188 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_604                  2 1 .\encode_text-fp16/1112_splitncnn_0 .\encode_text-fp16/1188 .\encode_text-fp16/1189
+Split                    .\encode_text-fp16/splitncnn_20             1 2 .\encode_text-fp16/1189 .\encode_text-fp16/1189_splitncnn_0 .\encode_text-fp16/1189_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_616                  1 1 .\encode_text-fp16/1189_splitncnn_1 .\encode_text-fp16/1203 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_618               1 1 .\encode_text-fp16/1203 .\encode_text-fp16/1207 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_21             1 2 .\encode_text-fp16/1207 .\encode_text-fp16/1207_splitncnn_0 .\encode_text-fp16/1207_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_621                  1 1 .\encode_text-fp16/1207_splitncnn_1 .\encode_text-fp16/1209 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_622              1 1 .\encode_text-fp16/1209 .\encode_text-fp16/1210
+BinaryOp                 .\encode_text-fp16/Mul_623                  2 1 .\encode_text-fp16/1207_splitncnn_0 .\encode_text-fp16/1210 .\encode_text-fp16/1211 0=2
+InnerProduct             .\encode_text-fp16/MatMul_624               1 1 .\encode_text-fp16/1211 .\encode_text-fp16/1214 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_626                  2 1 .\encode_text-fp16/1189_splitncnn_0 .\encode_text-fp16/1214 .\encode_text-fp16/1215
+Split                    .\encode_text-fp16/splitncnn_22             1 2 .\encode_text-fp16/1215 .\encode_text-fp16/1215_splitncnn_0 .\encode_text-fp16/1215_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_638                  1 1 .\encode_text-fp16/1215_splitncnn_1 .\encode_text-fp16/1229 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_653               1 1 .\encode_text-fp16/1229 .\encode_text-fp16/1246 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_655                1 3 .\encode_text-fp16/1246 .\encode_text-fp16/1247 .\encode_text-fp16/1248 .\encode_text-fp16/1249 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_657                  1 1 .\encode_text-fp16/1247 .\encode_text-fp16/1251 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_664              1 1 .\encode_text-fp16/1251 .\encode_text-fp16/1258 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_665            1 1 .\encode_text-fp16/1258 .\encode_text-fp16/1259 0=2
+Reshape                  .\encode_text-fp16/Reshape_671              1 1 .\encode_text-fp16/1248 .\encode_text-fp16/1267 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_677              1 1 .\encode_text-fp16/1249 .\encode_text-fp16/1275 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_678            1 1 .\encode_text-fp16/1275 .\encode_text-fp16/1276 0=2
+Permute                  .\encode_text-fp16/Transpose_679            1 1 .\encode_text-fp16/1267 .\encode_text-fp16/1277 0=3
+MatMul                   .\encode_text-fp16/MatMul_680               2 1 .\encode_text-fp16/1259 .\encode_text-fp16/1277 .\encode_text-fp16/1278
+BinaryOp                 .\encode_text-fp16/Add_682                  2 1 .\encode_text-fp16/1278 .\encode_text-fp16/558_splitncnn_4 .\encode_text-fp16/1280
+Softmax                  .\encode_text-fp16/Softmax_683              1 1 .\encode_text-fp16/1280 .\encode_text-fp16/1281 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_684               2 1 .\encode_text-fp16/1281 .\encode_text-fp16/1276 .\encode_text-fp16/1282
+Permute                  .\encode_text-fp16/Transpose_685            1 1 .\encode_text-fp16/1282 .\encode_text-fp16/1283 0=2
+Reshape                  .\encode_text-fp16/Reshape_690              1 1 .\encode_text-fp16/1283 .\encode_text-fp16/1288 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_691               1 1 .\encode_text-fp16/1288 .\encode_text-fp16/1291 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_693                  2 1 .\encode_text-fp16/1215_splitncnn_0 .\encode_text-fp16/1291 .\encode_text-fp16/1292
+Split                    .\encode_text-fp16/splitncnn_23             1 2 .\encode_text-fp16/1292 .\encode_text-fp16/1292_splitncnn_0 .\encode_text-fp16/1292_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_705                  1 1 .\encode_text-fp16/1292_splitncnn_1 .\encode_text-fp16/1306 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_707               1 1 .\encode_text-fp16/1306 .\encode_text-fp16/1310 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_24             1 2 .\encode_text-fp16/1310 .\encode_text-fp16/1310_splitncnn_0 .\encode_text-fp16/1310_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_710                  1 1 .\encode_text-fp16/1310_splitncnn_1 .\encode_text-fp16/1312 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_711              1 1 .\encode_text-fp16/1312 .\encode_text-fp16/1313
+BinaryOp                 .\encode_text-fp16/Mul_712                  2 1 .\encode_text-fp16/1310_splitncnn_0 .\encode_text-fp16/1313 .\encode_text-fp16/1314 0=2
+InnerProduct             .\encode_text-fp16/MatMul_713               1 1 .\encode_text-fp16/1314 .\encode_text-fp16/1317 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_715                  2 1 .\encode_text-fp16/1292_splitncnn_0 .\encode_text-fp16/1317 .\encode_text-fp16/1318
+Split                    .\encode_text-fp16/splitncnn_25             1 2 .\encode_text-fp16/1318 .\encode_text-fp16/1318_splitncnn_0 .\encode_text-fp16/1318_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_727                  1 1 .\encode_text-fp16/1318_splitncnn_1 .\encode_text-fp16/1332 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_742               1 1 .\encode_text-fp16/1332 .\encode_text-fp16/1349 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_744                1 3 .\encode_text-fp16/1349 .\encode_text-fp16/1350 .\encode_text-fp16/1351 .\encode_text-fp16/1352 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_746                  1 1 .\encode_text-fp16/1350 .\encode_text-fp16/1354 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_753              1 1 .\encode_text-fp16/1354 .\encode_text-fp16/1361 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_754            1 1 .\encode_text-fp16/1361 .\encode_text-fp16/1362 0=2
+Reshape                  .\encode_text-fp16/Reshape_760              1 1 .\encode_text-fp16/1351 .\encode_text-fp16/1370 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_766              1 1 .\encode_text-fp16/1352 .\encode_text-fp16/1378 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_767            1 1 .\encode_text-fp16/1378 .\encode_text-fp16/1379 0=2
+Permute                  .\encode_text-fp16/Transpose_768            1 1 .\encode_text-fp16/1370 .\encode_text-fp16/1380 0=3
+MatMul                   .\encode_text-fp16/MatMul_769               2 1 .\encode_text-fp16/1362 .\encode_text-fp16/1380 .\encode_text-fp16/1381
+BinaryOp                 .\encode_text-fp16/Add_771                  2 1 .\encode_text-fp16/1381 .\encode_text-fp16/558_splitncnn_3 .\encode_text-fp16/1383
+Softmax                  .\encode_text-fp16/Softmax_772              1 1 .\encode_text-fp16/1383 .\encode_text-fp16/1384 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_773               2 1 .\encode_text-fp16/1384 .\encode_text-fp16/1379 .\encode_text-fp16/1385
+Permute                  .\encode_text-fp16/Transpose_774            1 1 .\encode_text-fp16/1385 .\encode_text-fp16/1386 0=2
+Reshape                  .\encode_text-fp16/Reshape_779              1 1 .\encode_text-fp16/1386 .\encode_text-fp16/1391 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_780               1 1 .\encode_text-fp16/1391 .\encode_text-fp16/1394 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_782                  2 1 .\encode_text-fp16/1318_splitncnn_0 .\encode_text-fp16/1394 .\encode_text-fp16/1395
+Split                    .\encode_text-fp16/splitncnn_26             1 2 .\encode_text-fp16/1395 .\encode_text-fp16/1395_splitncnn_0 .\encode_text-fp16/1395_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_794                  1 1 .\encode_text-fp16/1395_splitncnn_1 .\encode_text-fp16/1409 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_796               1 1 .\encode_text-fp16/1409 .\encode_text-fp16/1413 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_27             1 2 .\encode_text-fp16/1413 .\encode_text-fp16/1413_splitncnn_0 .\encode_text-fp16/1413_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_799                  1 1 .\encode_text-fp16/1413_splitncnn_1 .\encode_text-fp16/1415 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_800              1 1 .\encode_text-fp16/1415 .\encode_text-fp16/1416
+BinaryOp                 .\encode_text-fp16/Mul_801                  2 1 .\encode_text-fp16/1413_splitncnn_0 .\encode_text-fp16/1416 .\encode_text-fp16/1417 0=2
+InnerProduct             .\encode_text-fp16/MatMul_802               1 1 .\encode_text-fp16/1417 .\encode_text-fp16/1420 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_804                  2 1 .\encode_text-fp16/1395_splitncnn_0 .\encode_text-fp16/1420 .\encode_text-fp16/1421
+Split                    .\encode_text-fp16/splitncnn_28             1 2 .\encode_text-fp16/1421 .\encode_text-fp16/1421_splitncnn_0 .\encode_text-fp16/1421_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_816                  1 1 .\encode_text-fp16/1421_splitncnn_1 .\encode_text-fp16/1435 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_831               1 1 .\encode_text-fp16/1435 .\encode_text-fp16/1452 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_833                1 3 .\encode_text-fp16/1452 .\encode_text-fp16/1453 .\encode_text-fp16/1454 .\encode_text-fp16/1455 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_835                  1 1 .\encode_text-fp16/1453 .\encode_text-fp16/1457 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_842              1 1 .\encode_text-fp16/1457 .\encode_text-fp16/1464 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_843            1 1 .\encode_text-fp16/1464 .\encode_text-fp16/1465 0=2
+Reshape                  .\encode_text-fp16/Reshape_849              1 1 .\encode_text-fp16/1454 .\encode_text-fp16/1473 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_855              1 1 .\encode_text-fp16/1455 .\encode_text-fp16/1481 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_856            1 1 .\encode_text-fp16/1481 .\encode_text-fp16/1482 0=2
+Permute                  .\encode_text-fp16/Transpose_857            1 1 .\encode_text-fp16/1473 .\encode_text-fp16/1483 0=3
+MatMul                   .\encode_text-fp16/MatMul_858               2 1 .\encode_text-fp16/1465 .\encode_text-fp16/1483 .\encode_text-fp16/1484
+BinaryOp                 .\encode_text-fp16/Add_860                  2 1 .\encode_text-fp16/1484 .\encode_text-fp16/558_splitncnn_2 .\encode_text-fp16/1486
+Softmax                  .\encode_text-fp16/Softmax_861              1 1 .\encode_text-fp16/1486 .\encode_text-fp16/1487 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_862               2 1 .\encode_text-fp16/1487 .\encode_text-fp16/1482 .\encode_text-fp16/1488
+Permute                  .\encode_text-fp16/Transpose_863            1 1 .\encode_text-fp16/1488 .\encode_text-fp16/1489 0=2
+Reshape                  .\encode_text-fp16/Reshape_868              1 1 .\encode_text-fp16/1489 .\encode_text-fp16/1494 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_869               1 1 .\encode_text-fp16/1494 .\encode_text-fp16/1497 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_871                  2 1 .\encode_text-fp16/1421_splitncnn_0 .\encode_text-fp16/1497 .\encode_text-fp16/1498
+Split                    .\encode_text-fp16/splitncnn_29             1 2 .\encode_text-fp16/1498 .\encode_text-fp16/1498_splitncnn_0 .\encode_text-fp16/1498_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_883                  1 1 .\encode_text-fp16/1498_splitncnn_1 .\encode_text-fp16/1512 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_885               1 1 .\encode_text-fp16/1512 .\encode_text-fp16/1516 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_30             1 2 .\encode_text-fp16/1516 .\encode_text-fp16/1516_splitncnn_0 .\encode_text-fp16/1516_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_888                  1 1 .\encode_text-fp16/1516_splitncnn_1 .\encode_text-fp16/1518 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_889              1 1 .\encode_text-fp16/1518 .\encode_text-fp16/1519
+BinaryOp                 .\encode_text-fp16/Mul_890                  2 1 .\encode_text-fp16/1516_splitncnn_0 .\encode_text-fp16/1519 .\encode_text-fp16/1520 0=2
+InnerProduct             .\encode_text-fp16/MatMul_891               1 1 .\encode_text-fp16/1520 .\encode_text-fp16/1523 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_893                  2 1 .\encode_text-fp16/1498_splitncnn_0 .\encode_text-fp16/1523 .\encode_text-fp16/1524
+Split                    .\encode_text-fp16/splitncnn_31             1 2 .\encode_text-fp16/1524 .\encode_text-fp16/1524_splitncnn_0 .\encode_text-fp16/1524_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_905                  1 1 .\encode_text-fp16/1524_splitncnn_1 .\encode_text-fp16/1538 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_920               1 1 .\encode_text-fp16/1538 .\encode_text-fp16/1555 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_922                1 3 .\encode_text-fp16/1555 .\encode_text-fp16/1556 .\encode_text-fp16/1557 .\encode_text-fp16/1558 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_924                  1 1 .\encode_text-fp16/1556 .\encode_text-fp16/1560 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_931              1 1 .\encode_text-fp16/1560 .\encode_text-fp16/1567 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_932            1 1 .\encode_text-fp16/1567 .\encode_text-fp16/1568 0=2
+Reshape                  .\encode_text-fp16/Reshape_938              1 1 .\encode_text-fp16/1557 .\encode_text-fp16/1576 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_944              1 1 .\encode_text-fp16/1558 .\encode_text-fp16/1584 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_945            1 1 .\encode_text-fp16/1584 .\encode_text-fp16/1585 0=2
+Permute                  .\encode_text-fp16/Transpose_946            1 1 .\encode_text-fp16/1576 .\encode_text-fp16/1586 0=3
+MatMul                   .\encode_text-fp16/MatMul_947               2 1 .\encode_text-fp16/1568 .\encode_text-fp16/1586 .\encode_text-fp16/1587
+BinaryOp                 .\encode_text-fp16/Add_949                  2 1 .\encode_text-fp16/1587 .\encode_text-fp16/558_splitncnn_1 .\encode_text-fp16/1589
+Softmax                  .\encode_text-fp16/Softmax_950              1 1 .\encode_text-fp16/1589 .\encode_text-fp16/1590 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_951               2 1 .\encode_text-fp16/1590 .\encode_text-fp16/1585 .\encode_text-fp16/1591
+Permute                  .\encode_text-fp16/Transpose_952            1 1 .\encode_text-fp16/1591 .\encode_text-fp16/1592 0=2
+Reshape                  .\encode_text-fp16/Reshape_957              1 1 .\encode_text-fp16/1592 .\encode_text-fp16/1597 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_958               1 1 .\encode_text-fp16/1597 .\encode_text-fp16/1600 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_960                  2 1 .\encode_text-fp16/1524_splitncnn_0 .\encode_text-fp16/1600 .\encode_text-fp16/1601
+Split                    .\encode_text-fp16/splitncnn_32             1 2 .\encode_text-fp16/1601 .\encode_text-fp16/1601_splitncnn_0 .\encode_text-fp16/1601_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_972                  1 1 .\encode_text-fp16/1601_splitncnn_1 .\encode_text-fp16/1615 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_974               1 1 .\encode_text-fp16/1615 .\encode_text-fp16/1619 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_33             1 2 .\encode_text-fp16/1619 .\encode_text-fp16/1619_splitncnn_0 .\encode_text-fp16/1619_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_977                  1 1 .\encode_text-fp16/1619_splitncnn_1 .\encode_text-fp16/1621 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_978              1 1 .\encode_text-fp16/1621 .\encode_text-fp16/1622
+BinaryOp                 .\encode_text-fp16/Mul_979                  2 1 .\encode_text-fp16/1619_splitncnn_0 .\encode_text-fp16/1622 .\encode_text-fp16/1623 0=2
+InnerProduct             .\encode_text-fp16/MatMul_980               1 1 .\encode_text-fp16/1623 .\encode_text-fp16/1626 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_982                  2 1 .\encode_text-fp16/1601_splitncnn_0 .\encode_text-fp16/1626 .\encode_text-fp16/1627
+Split                    .\encode_text-fp16/splitncnn_34             1 2 .\encode_text-fp16/1627 .\encode_text-fp16/1627_splitncnn_0 .\encode_text-fp16/1627_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_994                  1 1 .\encode_text-fp16/1627_splitncnn_1 .\encode_text-fp16/1641 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_1009              1 1 .\encode_text-fp16/1641 .\encode_text-fp16/1658 0=1536 1=1 2=786432
+Slice                    .\encode_text-fp16/Split_1011               1 3 .\encode_text-fp16/1658 .\encode_text-fp16/1659 .\encode_text-fp16/1660 .\encode_text-fp16/1661 -23300=3,512,512,-233 1=-1
+BinaryOp                 .\encode_text-fp16/Mul_1013                 1 1 .\encode_text-fp16/1659 .\encode_text-fp16/1663 0=2 1=1 2=1.250000e-01
+Reshape                  .\encode_text-fp16/Reshape_1020             1 1 .\encode_text-fp16/1663 .\encode_text-fp16/1670 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_1021           1 1 .\encode_text-fp16/1670 .\encode_text-fp16/1671 0=2
+Reshape                  .\encode_text-fp16/Reshape_1027             1 1 .\encode_text-fp16/1660 .\encode_text-fp16/1679 0=64 1=8 2=-1
+Reshape                  .\encode_text-fp16/Reshape_1033             1 1 .\encode_text-fp16/1661 .\encode_text-fp16/1687 0=64 1=8 2=-1
+Permute                  .\encode_text-fp16/Transpose_1034           1 1 .\encode_text-fp16/1687 .\encode_text-fp16/1688 0=2
+Permute                  .\encode_text-fp16/Transpose_1035           1 1 .\encode_text-fp16/1679 .\encode_text-fp16/1689 0=3
+MatMul                   .\encode_text-fp16/MatMul_1036              2 1 .\encode_text-fp16/1671 .\encode_text-fp16/1689 .\encode_text-fp16/1690
+BinaryOp                 .\encode_text-fp16/Add_1038                 2 1 .\encode_text-fp16/1690 .\encode_text-fp16/558_splitncnn_0 .\encode_text-fp16/1692
+Softmax                  .\encode_text-fp16/Softmax_1039             1 1 .\encode_text-fp16/1692 .\encode_text-fp16/1693 0=-1 1=1
+MatMul                   .\encode_text-fp16/MatMul_1040              2 1 .\encode_text-fp16/1693 .\encode_text-fp16/1688 .\encode_text-fp16/1694
+Permute                  .\encode_text-fp16/Transpose_1041           1 1 .\encode_text-fp16/1694 .\encode_text-fp16/1695 0=2
+Reshape                  .\encode_text-fp16/Reshape_1046             1 1 .\encode_text-fp16/1695 .\encode_text-fp16/1700 0=512 1=-1
+InnerProduct             .\encode_text-fp16/MatMul_1047              1 1 .\encode_text-fp16/1700 .\encode_text-fp16/1703 0=512 1=1 2=262144
+BinaryOp                 .\encode_text-fp16/Add_1049                 2 1 .\encode_text-fp16/1627_splitncnn_0 .\encode_text-fp16/1703 .\encode_text-fp16/1704
+Split                    .\encode_text-fp16/splitncnn_35             1 2 .\encode_text-fp16/1704 .\encode_text-fp16/1704_splitncnn_0 .\encode_text-fp16/1704_splitncnn_1
+LayerNorm                .\encode_text-fp16/Add_1061                 1 1 .\encode_text-fp16/1704_splitncnn_1 .\encode_text-fp16/1718 0=512 1=1.000000e-05
+InnerProduct             .\encode_text-fp16/MatMul_1063              1 1 .\encode_text-fp16/1718 .\encode_text-fp16/1722 0=2048 1=1 2=1048576
+Split                    .\encode_text-fp16/splitncnn_36             1 2 .\encode_text-fp16/1722 .\encode_text-fp16/1722_splitncnn_0 .\encode_text-fp16/1722_splitncnn_1
+BinaryOp                 .\encode_text-fp16/Mul_1066                 1 1 .\encode_text-fp16/1722_splitncnn_1 .\encode_text-fp16/1724 0=2 1=1 2=1.702000e+00
+Sigmoid                  .\encode_text-fp16/Sigmoid_1067             1 1 .\encode_text-fp16/1724 .\encode_text-fp16/1725
+BinaryOp                 .\encode_text-fp16/Mul_1068                 2 1 .\encode_text-fp16/1722_splitncnn_0 .\encode_text-fp16/1725 .\encode_text-fp16/1726 0=2
+InnerProduct             .\encode_text-fp16/MatMul_1069              1 1 .\encode_text-fp16/1726 .\encode_text-fp16/1729 0=512 1=1 2=1048576
+BinaryOp                 .\encode_text-fp16/Add_1071                 2 1 .\encode_text-fp16/1704_splitncnn_0 .\encode_text-fp16/1729 .\encode_text-fp16/1730
+LayerNorm                .\encode_text-fp16/Add_1084                 1 1 .\encode_text-fp16/1730 .\encode_text-fp16/1745 0=512 1=1.000000e-05
+Gather                   .\encode_text-fp16/Gather_1088              2 1 .\encode_text-fp16/1745 .\encode_text-fp16/511 .\encode_text-fp16/1749
+Gather                   .\encode_text-fp16/Gather_1090              2 1 .\encode_text-fp16/1749 .\encode_text-fp16/1750 .\encode_text-fp16/1751
+InnerProduct             .\encode_text-fp16/MatMul_1091              1 1 .\encode_text-fp16/1751 .\encode_text-fp16/1752 0=1024 2=524288
