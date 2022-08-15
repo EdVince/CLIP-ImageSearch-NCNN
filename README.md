@@ -11,7 +11,7 @@
 **PS**：工作繁忙，更新缓慢，只求一个star
 
 ## Demo
-android: 可直接运行的[apk(提取码:6666)](https://pan.baidu.com/s/1zu19Jj7kk0npxSa1PLRLXg)
+android: 可直接运行的[apk](https://pan.baidu.com/s/1Q1nt_1gtcFo31goDJVOpdQ?pwd=6666)
 ![image](./resources/clip.jpg)
 ![image](./resources/bicycle.jpg)
 用法：
@@ -20,7 +20,7 @@ android: 可直接运行的[apk(提取码:6666)](https://pan.baidu.com/s/1zu19Jj
 3. 在最底下的框输入你要想搜内容，一定要用英文！！！
 4. 最后点击“搜”就有结果了(麒麟970上1.5s就能出来结果)
 
-x86: 可直接运行的[exe(提取码:6666)](https://pan.baidu.com/s/1vG2sw_ZkF2s6PFob9XVakQ)
+x86: 可直接运行的[exe](https://pan.baidu.com/s/1RvVxXJ1TPazJT_Kp-u4tkA?pwd=6666)
 ![image](./resources/x86.png)
 用法：按照按钮的顺序点击就好了，举例：
 1. 先点击“1.选择图库”，选择该repo的gallery文件夹
