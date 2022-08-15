@@ -12,8 +12,11 @@
 
 ## Demo
 android: 可直接运行的[apk](https://pan.baidu.com/s/1Q1nt_1gtcFo31goDJVOpdQ?pwd=6666)
+
 ![image](./resources/clip.jpg)
+
 ![image](./resources/bicycle.jpg)
+
 用法：
 1. 先点“扫描相册”，扫描一遍手机有的图片
 2. 按照各个时间段的图片数量，选择一个合适进行特征抽取(耗时与数量成正比，麒麟970上0.5s一张图，慢慢等)
@@ -21,7 +24,9 @@ android: 可直接运行的[apk](https://pan.baidu.com/s/1Q1nt_1gtcFo31goDJVOpdQ
 4. 最后点击“搜”就有结果了(麒麟970上1.5s就能出来结果)
 
 x86: 可直接运行的[exe](https://pan.baidu.com/s/1RvVxXJ1TPazJT_Kp-u4tkA?pwd=6666)
+
 ![image](./resources/x86.png)
+
 用法：按照按钮的顺序点击就好了，举例：
 1. 先点击“1.选择图库”，选择该repo的gallery文件夹
 2. 然后点击“2.抽取图库特征”，抽取所选文件夹的所有图片的特征，耗时与图片数量有关
