@@ -51,7 +51,7 @@ x86: 可直接运行的[exe](https://pan.baidu.com/s/1RvVxXJ1TPazJT_Kp-u4tkA?pwd
 ## 工作内容
 - [x] pytorch模型梳理与导出
 - [x] x86 demo
-    - 要编译的话，到[这里(提取码:6666)](https://pan.baidu.com/s/1ZoRrGYJcloSG-eb7h23gFA)下载.bin文件并放置到x86项目的assert文件夹下
+    - 要编译的话，到[这里](https://pan.baidu.com/s/1qNnrFBuNiT0l67irAJgf0A?pwd=6666)下载.bin文件并放置到x86项目的assert文件夹下
 - [x] android demo
     - 要编译的话，到上面x86的链接下载.bin文件放到android项目的assert文件夹下
 
