@@ -10,6 +10,8 @@
 
 **PS**：工作繁忙，更新缓慢，只求一个star
 
+**Note**: 为了方便大家下载，所有的模型和执行文件都上传了一份到Github，大家可以从Github上下载：https://github.com/EdVince/model_zoo/releases/tag/CLIP-ImageSearch-NCNN
+
 ## Demo
 android: 可直接运行的[apk](https://pan.baidu.com/s/1Q1nt_1gtcFo31goDJVOpdQ?pwd=6666)
 
